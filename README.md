@@ -1,1 +1,2 @@
-## study basic frontend languages
+# study repository
+## basic frontend languages
