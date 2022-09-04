@@ -128,3 +128,17 @@ calculator.divide(9, 3);
 calculator.multi(5, 4);
 calculator.power(6, 6);
 
+const calculate = {
+    plus: function (a, b) {
+        console.log("hello")
+        return a + b
+        // return은 함수의 값을 반환한다. 값을 외부로 보낸다.
+        // 망고주스 믹서에서 망고를 꺼내는 것과 같다.
+        console.log("bye bye")
+        // return 이후 함수는 더이상 작동하지 않는다.
+    }
+}
+
+const pulsResult = calculate.plus(2,3);
+// 함수 안에서 return하지 않으면 pulsResult는 undefined가 된다.
+
