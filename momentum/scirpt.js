@@ -68,9 +68,10 @@ console.log(player.fat)
 
 //  function 반복해서 쓸 수 있는 코드 조각
 function sayHello(name, age) {
+    // 함수에 sayHello 라는 이름을 지어주고 () 안에 인자(argument)를 넣어준다.
     console.log("Hello, my name is " + name + " and I'm " + age)
 }
-//순서를 중요하게!
+// 인자의 순서를 중요하게!
 
 sayHello('simba', 20);
 // Hello, my name is simba and I'm 20
@@ -87,11 +88,11 @@ divide(1, 6);
 // 0.16666666666666666
 
 const user = {
-    n: "user",
     greeting: function (otherPerson) {
         console.log('hello! ' + otherPerson + " nice to meet you");
     },
 };
+// 객체 안의 property 값에 함수를 할당 할 수 도 있다.
 // otherPerson은 function 의 {body} 안에서만 사용할 수 있다! 
 
 user.greeting("lynn")
@@ -139,6 +140,26 @@ const calculate = {
     }
 }
 
-const pulsResult = calculate.plus(2,3);
+const pulsResult = calculate.plus(2, 3);
 // 함수 안에서 return하지 않으면 pulsResult는 undefined가 된다.
 
+const age = parseInt(prompt("How old are you?"));
+// prompt 브라우저 입력창을 띄우는 함수
+// parseInt 입력값을 number type으로 바꿔주는 함수
+
+console.log(age)
+// type = number => 숫자 값
+// type = string => NaN (숫자값이 아님을 뜻함)
+
+
+// 조건문 boolean으로 판단 가능한 값
+if (isNaN(age) || age < 0) {
+    // age가 NaN일 경우 === true
+    console.log("Please write a real positive number.");
+} else if (age < 18) {
+    // age가 NaN이 아니고 === false, 18 이상일 경우
+    console.log("you're too young.");
+} else {
+    // age가 Nan이 아니고 === false, 18 미만일 경우
+    console.log("you can drink.")
+}
