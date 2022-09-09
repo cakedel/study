@@ -6,6 +6,4 @@ const bgImage = document.createElement("img");
 
 bgImage.src = `img/${chonsenImages}`;
 
-console.log(bgImage);
-
 document.body.appendChild(bgImage);
