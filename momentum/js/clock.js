@@ -11,3 +11,14 @@ function getClock() {
 
 getClock();
 setInterval(getClock, 1000);
+
+
+let age = 20;
+
+if (age > 9) {
+  // ()이 true일 때 {} 블록을 실행한다.
+  console.log('child')
+} else {
+  // () 이외의 경우 else 이하의 {} 블록을 실행한다.
+  console.log('not child')
+}
