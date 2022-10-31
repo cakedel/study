@@ -14,12 +14,13 @@ const solution = () => {
 };
 
 console.log(solution());
+// 30
 
 const betterSolution = () => {
   let sum = 0;
   // 변수 sum을 선언해 값을 담는다.
   for (i = 2; i <= n; i += 2) {
-    // for문을 통해 초기문이 2이고, 조건문이 n이하, 증감문에서 2씩 증가시키고
+    // for문 초기문이 2이고, 조건문이 n이하, 증감문에서 2씩 증가시키고
     sum += i;
     // sum에 for문을 돌때마다 i를 더한다.
   }
@@ -28,3 +29,4 @@ const betterSolution = () => {
 };
 
 console.log(betterSolution())
+// 30
