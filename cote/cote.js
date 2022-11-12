@@ -28,31 +28,37 @@ const betterSolution = () => {
   // sum을 반환한다.
 };
 
-console.log(betterSolution())
+console.log(betterSolution());
 // 30
 
 const same = (array, n) => {
-  const newArray = array.filter((it) => it === n)
+  const newArray = array.filter((it) => it === n);
   // 배열 array에서 정수 n의 값과 일치하는 값들만 뽑아 새로운 배열 newArray 만들기
-  return newArray.length
+  return newArray.length;
   // newArray의 길이를 return
-}
+};
 
 const height = (array, height) => {
-  return array.filter((it) => it > height).length
+  return array.filter((it) => it > height).length;
   // 배열에서 height보다 큰 값을 찾아 새로운 배열을 만든 후 배열의 길이 반환
- }
+};
 
- const anotherHeight = (array, height) => {
+const anotherHeight = (array, height) => {
   let count = 0;
   // 머쓱이보다 키 큰 사람 변수 count 선언
   for (i of array) {
-      if (height < i) {
-          // for of문을 사용하여 배열 안의 값 i 가 height보다 클 경우
-          count ++
-          // count에 증감 연산자로 1을 더해준다
-      }
+    if (height < i) {
+      // for of문을 사용하여 배열 안의 값 i 가 height보다 클 경우
+      count++;
+      // count에 증감 연산자로 1을 더해준다
+    }
   }
   return count;
   // count 반환
-}
+};
+
+const cote7 = (n) => {
+  // 피자 7조각으로 정수 n을 나눠서
+  // 소수점을 올림하는 함수 Math.ceil() 사용
+  return Math.ceil(n / 7);
+};
