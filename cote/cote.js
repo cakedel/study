@@ -62,3 +62,17 @@ const cote7 = (n) => {
   // 소수점을 올림하는 함수 Math.ceil() 사용
   return Math.ceil(n / 7);
 };
+
+const cote8_1 = (num_list) => {
+  // 배열 num_list를 뒤집는 메소드 reversse() 사용
+  return num_list.reverse()
+}
+
+const cote8_2 = (num_list) => {
+  // 배열 num_list에서 짝수를 걸러 새로운 배열로 만든 후 배열의 길이 재기
+  const even = num_list.filter((el) => el % 2 === 0).length
+  // 배열 num_list에서 홀수를 걸러 새로운 배열로 만든 후 배열의 길이 재기
+  const odd = num_list.filter((el) => el % 2 === 1).length
+  // 변수 even과 odd를 배열로 만들어 반환
+  return [even, odd]
+}
