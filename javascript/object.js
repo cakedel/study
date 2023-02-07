@@ -1,40 +1,81 @@
-const solution = (numbers) => {
-  return numbers.reduce((v, i) => v + i) / numbers.length;
-  // 배열 안의 값들을 모두 더하는 메서드 reduce를 사용한뒤
-  // 배열의 길이로 합을 나눠 평균을 도출
-};
+// Objects
+// 자바스크립트의 데이터 타입 중 하나
+// a collection of related data and/or fuctionally
+// object = { key: value};
 
-const c = (numbers) => {
-  let sum = 0;
-  // 값을 담을 변수 선언
-  // const 로 선언할 시
-  for (i of numbers) {
-    sum += i;
-  }
-  // for of 로 배열을 돌면서 sum에 i의 값을 더해준다
-  return sum / numbers.length;
-  // 더해준 값에 배열의 길이를 나누기
-};
+// 1. Literals and properties
+const obj1 = {}; //'object literal syntax
+const obj2 = new Object(); // 'object contructor' syntax
 
-const b = (n, k) => {
-  const sheep = 12000;
-  const beverage = 2000;
-  // 양꼬치와 음료수의 가격을 변수로 선언
-  const service = Math.floor(n / 10);
-  // 서비스 받은 음료의 값을 구하는 변수 작성
-  // 10인분에 음료 1개씩 서비스이므로 양꼬치의 양을 10인분으로 나눠서
-  // 나머지를 버리는 Math.floor 함수 작성
-  return sheep * n + beverage * (k - service);
-  // 총 먹은 음료수의 갯수에서 서비스받은 음료수의 갯수를 빼고 가격 return
-};
+const jiwon = { name: "jiwon", age: 3 };
+print(jiwon);
 
-const array = [190, 140, 167, 172];
-const height = 170;
+jiwon.hasJob = false; // object 타입 추가. 가능하면 피해서 코딩하자.
+delete jiwon.hasJob; // 지우기도 가능.
 
-const compare = (array, height) => {
-  for (i = 0; i < array.length; i > height) {
-    console.log(i);
-  }
-};
+// 2. Computed properties
+console.log(jiwon.name); // 출력
+console.log(jiwon["name"]); // run time 에서 결정될 때
 
-compare();
+// 3. Property value shorthand
+const person1 = { name: "bob", age: 2 };
+const person2 = { name: "steve", age: 3 };
+const person3 = { name: "dave", age: 4 };
+const person4 = new person("jiwon", 20);
+console.log(person4);
+
+// 4. Constructor fuction
+// 자동으로 새로운 object를 만들어줌
+function Person(name, age) {
+  // this = {};
+  this.name = name;
+  this.age = age;
+  return this;
+}
+
+// 5. in operator: property existence check (key in obj)
+console.log("name" in jiwon); // true
+
+// 6. for ...in vs for ...of
+// for (key in obj)
+
+for (key in jiwon) {
+  console.log(key); // jiwon object 안에 있는 키들을 호출
+}
+
+// for (value of iterable)
+
+const array = [1, 2, 3, 4];
+
+for (let i = 0; i < array.length; i++);
+for (value of array) {
+  console.log(value);
+}
+
+// 7. Fun cloning
+// Object.assign(dest, [obj1, obj2, obj3...])
+
+const user = { name: "jiwon", age: "20" };
+const user2 = user;
+user2.name = "coder";
+console.log(user);
+
+// old way
+const user3 = {};
+for (key in user) {
+  user3[key] = user[key];
+}
+console.clear();
+console.log(user3);
+
+const user4 = {};
+Object.assign(user4, user);
+console.log(user4);
+
+// anotehr example
+const fruit1 = { color: "red" };
+const fruit2 = { color: "blue", size: "big" };
+const mixed = Object.assign({}, fruit1, fruit2);
+
+console.log(mixed.color); // blue
+console.log(mixed.size); // big
